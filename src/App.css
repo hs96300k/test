@@ -1,0 +1,64 @@
+/* Import Inter from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter :wght@400;500;600;700&display=swap');
+
+/* CSS Variables for Dark & Light Mode */
+:root.dark {
+  --bg-color: #0a0a0a;
+  --text-color: #ffffff;
+  --subtext-color: #7d8087;
+  --border-color: #1b1b1b;
+  --hover-bg: #222;
+}
+
+:root.light {
+  --bg-color: #ffffff;
+  --text-color: #0a0a0a;
+  --subtext-color: #7d8087;
+  --border-color: #dddddd;
+  --hover-bg: #f9f9f9;
+}
+
+/* Global Reset & Base Styles */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+
+  /* Prevent horizontal scrolling */
+  overflow-x: hidden;
+
+  /* Allow vertical scrolling */
+  overflow-y: auto;
+}
+
+/* Ensure everything uses border-box for sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Optional: Hide Scrollbar (for Webkit browsers like Chrome, Safari) */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox: scrollbar width & color */
+body {
+  scrollbar-width: none; /* "auto" or "none" */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.background-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-color);
+  z-index: -1;
+}
